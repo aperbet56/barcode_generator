@@ -14,17 +14,16 @@ generateBtn.addEventListener("click", () => {
 
 // Déclaration de la fonction generatePDF qui va permettre de générer un fichier pdf
 const generatePDF = () => {
-  let opt = {
-    margin: 1,
+  let options = {
+    margin: 10,
     filename: `${text.value}.pdf`,
-    image: { type: "jpeg", quality: 1 },
-    html2canvas: { scale: 4 },
-    jsPDF: { format: "a4", orientation: "l" },
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   };
 
-  // New Promise-based usage:
-  html2pdf().set(opt).from(barcodeBox).save();
-  window.location.reload;
+  // Nouvelle utilisation basée sur la promesse
+  html2pdf().set(options).from(barcodeBox).save();
 };
 
 // Ecoute de l'événement "click" sur le bouton "télécharger en pdf" et appel de la fonction generateBtn
