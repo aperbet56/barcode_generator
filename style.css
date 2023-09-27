@@ -10,6 +10,8 @@
     outline: none;
 }
 
+/**** Style général de la page ****/
+
 body {
     width: 100%;
     height: 100vh;
@@ -50,11 +52,11 @@ header h1 {
     margin: 0 20px;
     background-color: #ffffff;
     border-radius: 15px;
+    padding: 25px;
 }
 
 .form__group {
     display: flex;
-    margin: 20px;
 }
 
 .text__input {
@@ -66,41 +68,30 @@ header h1 {
     margin-right: 20px;
 }
 
-.generate__btn {
-    background-color: #0077ff;
+.generate__btn, .pdf__btn, .reset__btn {
     color: #ffffff;
     padding: 15px;
     font-size: 18px;
     border-radius: 12px;
     cursor: pointer;
+}
+
+.generate__btn, .pdf__btn {
+    background-color: #0077ff;
 }
 
 #barcode {
-    margin: 20px;
+   margin: 20px 0;
 }
 
-.pdf__btn {
-    background-color: #0077ff;
-    color: #ffffff;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 12px;
+.pdf__btn, .reset__btn {
     margin-bottom: 20px;
-    width: 94%;
-    cursor: pointer;
+    width: 100%; 
     display: none;
 }
 
 .reset__btn {
     background-color: #ff0800;
-    color: #ffffff;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    width: 94%;
-    cursor: pointer;
-    display: none;
 }
 
 footer span {
@@ -118,7 +109,7 @@ footer span {
 
     .form__group {
         flex-direction: column;
-        width: 94%;
+        width: 100%;
     }
 
     .text__input {
@@ -128,7 +119,7 @@ footer span {
 
     #barcode {
         margin: 10px 0 20px;
-        width: 97%;
+        width: 97%; 
     }
 }
 
